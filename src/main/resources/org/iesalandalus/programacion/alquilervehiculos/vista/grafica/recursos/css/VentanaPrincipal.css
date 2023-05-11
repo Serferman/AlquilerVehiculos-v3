@@ -11,7 +11,7 @@
 }
 
 .button:hover {
-    -fx-background-color: #015D52;
+    -fx-background-color: #007769;
     -fx-scale-x: 1.06;
     -fx-scale-y: 1.06;
 }
@@ -23,7 +23,7 @@
 }
 
 .vbox-MenuBar {
-    -fx-background-color: #6ca0a0;
+    -fx-background-color: #7cb8b8;
     -fx-border-width: 0 2 0 0;
     -fx-border-color:black;
     -fx-effect: dropshadow(Three-pass-box, black, 8, 0, 0, 0 );
@@ -36,24 +36,32 @@
 }
 
 .button-imageView {
-    -fx-border-radius: 10;
-    -fx-border-width: 3;
-    -fx-border-color:black;
-    -fx-scale-x: 0.9;
-    -fx-scale-y: 0.9;
-    -fx-background-color: #6ca0a0;
+    -fx-border-width: 0;
+    -fx-background-color: #97dfdf;
+    -fx-translate-y: -1;
 }
 
 .button-imageView:hover {
-    -fx-scale-x: 0.96;
-    -fx-scale-y: 0.96;
-    -fx-background-color: #658585;
+    -fx-translate-y: -5 ;
+    -fx-background-color: #2da0a0;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
 }
 
 .button-imageView:pressed {
-    -fx-scale-x: 0.92;
-    -fx-scale-y: 0.92;
     -fx-background-color: #8dbbbb;
+    -fx-translate-y: 0 ;
+}
+
+.stackPane-button-imageView {
+    -fx-border-radius: 10;
+    -fx-border-width: 3;
+    -fx-border-color:black;
+    -fx-background-color: #155555;
+    -fx-background-radius: 10;
+    -fx-min-width: 57;
+    -fx-min-height: 48;
+    
 }
 
 .hbox-botLine {
@@ -104,4 +112,3 @@
     -fx-border-color: black;
     -fx-border-width: 3;
 }
-

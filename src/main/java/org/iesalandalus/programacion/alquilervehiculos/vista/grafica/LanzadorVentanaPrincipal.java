@@ -17,6 +17,21 @@ public class LanzadorVentanaPrincipal extends Application {
 			
 			Controlador ventanaPrincipal = Controladores.get("vistas/VentanaPrincipal.fxml", TITULO, null);		
 			ventanaPrincipal.getEscenario().setOnCloseRequest(e -> confirmarSalida(ventanaPrincipal.getEscenario(), e));
+			//ventanaPrincipal.getEscenario().setIconified(false);
+			/*
+			String operativeS1 = System.getenv("$DESKTOP_SESSION").toLowerCase();
+			
+			try {
+				ProcessBuilder pb = new ProcessBuilder("lsb_release -d");
+				pb.start();
+			} catch (IOException e) {
+				System.out.println(e.getMessage());
+			}
+			if (operativeSystem.contains("mint")) {
+				System.out.println("A");
+			}
+			
+			//ventanaPrincipal.getEscenario().setMaximized(true);*/
 			ventanaPrincipal.getEscenario().show();
 					
 		} catch (Exception e) {
