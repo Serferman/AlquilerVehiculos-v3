@@ -125,7 +125,7 @@ public class Vehiculos implements IVehiculos {
 	}
 
 	private Element getElemento(Document documentoXml, Vehiculo vehiculo) {
-		Element elementoCliente = documentoXml.createElement("cliente");
+		Element elementoVehiculo = documentoXml.createElement("vehiculo");
 
 		elementoCliente.setAttribute(MARCA, vehiculo.getMarca());
 		elementoCliente.setAttribute(MODELO, vehiculo.getModelo());

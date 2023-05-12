@@ -56,12 +56,12 @@
                <children>
                   <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="stackPane-Aceptar" stylesheets="@../css/insertar_XXX.css">
                      <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#ratonPulsaAceptar" styleClass="button-Aceptar" stylesheets="@../css/insertarCliente.css" text="Aceptar" />
+                        <Button mnemonicParsing="false" onMouseClicked="#ratonPulsaAceptar" styleClass="button-Aceptar" stylesheets="@../css/insertar_XXX.css" text="Aceptar" />
                      </children>
                   </StackPane>
                   <StackPane prefHeight="53.0" prefWidth="110.0" styleClass="stackPane-Cancelar" stylesheets="@../css/insertar_XXX.css">
                      <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#ratonPulsaCancelar" prefHeight="20.0" prefWidth="92.0" styleClass="button-Cancelar" stylesheets="@../css/insertarCliente.css" text="Cancelar" />
+                        <Button mnemonicParsing="false" onMouseClicked="#ratonPulsaCancelar" prefHeight="20.0" prefWidth="92.0" styleClass="button-Cancelar" stylesheets="@../css/insertar_XXX.css" text="Cancelar" />
                      </children>
                   </StackPane>
                </children>

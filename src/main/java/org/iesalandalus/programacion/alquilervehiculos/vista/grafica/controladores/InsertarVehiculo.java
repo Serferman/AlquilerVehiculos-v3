@@ -48,10 +48,10 @@ public class InsertarVehiculo extends Controlador {
     	// Creamos las opciones del choice box
 		chbTipoVehiculo.setItems(FXCollections.observableArrayList(TURISMO, AUTOBUS, FURGONETA));
 		// Comprobacion del campo seleccionado mediante los listener
-		chbTipoVehiculo.valueProperty().addListener(nv -> comprobarCBTipoVehiculo());
+		chbTipoVehiculo.valueProperty().addListener(nv -> comprobarTipoVehiculo());
     }
     
-    void comprobarCBTipoVehiculo() {
+    void comprobarTipoVehiculo() {
     	
 		String opcionSeleccionada = chbTipoVehiculo.valueProperty().getValue();
 		//chbTipoVehiculo.setValue(TURISMO);
@@ -89,6 +89,7 @@ public class InsertarVehiculo extends Controlador {
 		}
     }
     
+    // Crea un vehiculo
     public Vehiculo getVehiculo() {
 		String marca = tfMarca.getText();
 		String modelo = tfModelo.getText();

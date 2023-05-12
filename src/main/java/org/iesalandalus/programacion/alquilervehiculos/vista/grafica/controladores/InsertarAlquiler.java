@@ -27,6 +27,7 @@ public class InsertarAlquiler extends Controlador {
     @FXML
     private TextField tfMatricula;
 
+    // Crea un Alquiler
     public Alquiler getAlquiler() {
     	Cliente dni = Cliente.getClienteConDni(tfDni.getText());
     	Vehiculo matricula = Vehiculo.getVehiculoConMatricula(tfMatricula.getText()) ;

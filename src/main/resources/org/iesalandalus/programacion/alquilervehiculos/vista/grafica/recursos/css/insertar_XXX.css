@@ -1,4 +1,4 @@
-/* Parametros generales para todos los CUADROS DE TEXTO de insertar clientes */
+/* Parametros generales para todos los CUADROS DE TEXTO de insertar clientes, vehiculos, alquileres  */
 
 .textField {
     -fx-background-color: white;
@@ -24,7 +24,7 @@
 }
 
 
-/* Parametros y configuración para las ETIQUETAS de insertar clientes */
+/* Parametros y configuración para las ETIQUETAS de insertar clientes, vehiculos, alquileres */
 
 .label {
     -fx-font-family: Tahoma;
@@ -34,7 +34,7 @@
 }
 
 
-/* Parametros y configuración para el boton ACEPTAR de insertar clientes */
+/* Parametros y configuración para el boton ACEPTAR de insertar clientes, vehiculos, alquileres  */
 
 .button-Aceptar {
     -fx-scale-x: 1.0;
@@ -65,16 +65,15 @@
 }
 
 
-/* Parametros y configuración para el boton CANCELAR de insertar clientes */
+/* Parametros y configuración para el boton CANCELAR de insertar clientes, vehiculos, alquileres  */
 
 .button-Cancelar {
-    -fx-scale-x: 1.0;
-    -fx-scale-y: 1.0;
     -fx-background-color: #b46c6c;
     -fx-font-family: Tahoma;
     -fx-font-weight: bold;
     -fx-font-color: black;
     -fx-font-size: 16;
+    -fx-translate-y: -0.8;
 }
 
 .button-Cancelar:hover {
@@ -82,7 +81,7 @@
 }
 
 .button-Cancelar:pressed {
-    -fx-translate-y: 0;
+    -fx-translate-y: -0.8;
 }
 
 .stackPane-Cancelar {
@@ -96,11 +95,10 @@
 }
 
 
-/* Parametros y configuración para el boton BORRAR de insertar clientes */
+/* Parametros y configuración para el boton BORRAR de insertar clientes, vehiculos, alquileres  */
 
 .button-Borrar {
-    -fx-scale-x: 1.0;
-    -fx-scale-y: 1.0;
+    -fx-translate-y: -0.8;
     -fx-background-color: #969696;
 }
 
@@ -109,7 +107,7 @@
 }
 
 .button-Borrar:pressed {
-    -fx-translate-y: 0;
+    -fx-translate-y: -0.8;
 }
 
 .stackPane-Borrar {

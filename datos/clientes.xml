@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <clientes>
-    <cliente dni="11223344B" nombre="Don Patricio Estrella" telefono="688913774"/>
+    <cliente dni="11223344B" nombre="Raul" telefono="688913774"/>
     <cliente dni="11111111H" nombre="Patricio Estrella" telefono="950111111"/>
-    <cliente dni="77245236N" nombre="Sergio" telefono="688913774"/>
+    <cliente dni="77245236N" nombre="Sergio" telefono="950207983"/>
+    <cliente dni="77170845A" nombre="Alba" telefono="688913757"/>
 </clientes>

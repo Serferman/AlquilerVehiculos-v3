@@ -22,7 +22,7 @@ public class InsertarCliente extends Controlador {
 	@FXML
 	private TextField tfTelefono;
 
-	
+    // Crea un Cliente
 	public Cliente getCliente() {
 		String nombre = tfNombre.getText();
 		String dni = tfDni.getText();

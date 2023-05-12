@@ -57,13 +57,13 @@ public class VentanaPrincipal extends Controlador {
 
 	@FXML
 	void btBuscarCliente(ActionEvent event) {
-		buscarCliente ventanaBuscarCliente = (buscarCliente) Controladores.get("vistas/buscarCliente.fxml", "Vista grafica de borrar cliente", getEscenario());
+		BuscarCliente ventanaBuscarCliente = (BuscarCliente) Controladores.get("vistas/buscarCliente.fxml", "Vista grafica de borrar cliente", getEscenario());
 		ventanaBuscarCliente.getEscenario().showAndWait();
 	}
 
 	@FXML
 	void btBuscarVehiculo(ActionEvent event) {
-		buscarVehiculo ventanaBuscarVehiculo = (buscarVehiculo) Controladores.get("vistas/buscarVehiculo.fxml", "Vista grafica de borrar vehiculo", getEscenario());
+		BuscarVehiculo ventanaBuscarVehiculo = (BuscarVehiculo) Controladores.get("vistas/buscarVehiculo.fxml", "Vista grafica de borrar vehiculo", getEscenario());
 		ventanaBuscarVehiculo.getEscenario().showAndWait();
 	}
 
