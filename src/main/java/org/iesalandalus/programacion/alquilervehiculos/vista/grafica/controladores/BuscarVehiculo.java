@@ -16,51 +16,62 @@ import javafx.scene.input.MouseEvent;
 public class BuscarVehiculo extends Controlador {
 
 	@FXML
-	private Label LCIlindradas;
+	private Label lCIlindradas;
 
 	@FXML
-	private Label LMarca;
+	private Label lMarca;
 
 	@FXML
-	private Label LMatricula;
+	private Label lMatricula;
 
 	@FXML
-	private Label LModelo;
+	private Label lModelo;
 
 	@FXML
-	private Label LPMA;
+	private Label lPMA;
 
 	@FXML
-	private Label LPlazas;
+	private Label lPlazas;
 
 	@FXML
 	private TextField tfMatriculaBuscado;
 
 	@FXML
+	void initialize() {
+		tfMatriculaBuscado.textProperty().addListener((ob, ov, nv) -> comprobarTextoMatriculaBuscada(nv));
+	}
+
+	void comprobarTextoMatriculaBuscada(String nuevoValor) {
+		if (!nuevoValor.matches("\\d{4}[BCDFGHJKLMNPRSTVWXYZ]{3}")) {
+			tfMatriculaBuscado.setStyle("-fx-effect: dropshadow(Three-pass-box, red, 10, 0, 0, 0 );");
+		} else {
+			tfMatriculaBuscado.setStyle("-fx-effect: dropshadow(Three-pass-box, green, 10, 0, 0, 0 );");
+		}
+	}
+	
+	@FXML
 	void ratonPulsaBorrar(MouseEvent event) {
-		LMarca.setText(null);
-		LMarca.setDisable(true);
-		//LMarca.setStyle(OPACIDAD_MEDIA);
+		lMarca.setText(null);
+		lMarca.setDisable(true);
 
-		LModelo.setText(null);
-		LModelo.setDisable(true);
-		//LModelo.setStyle(OPACIDAD_MEDIA);
+		lModelo.setText(null);
+		lModelo.setDisable(true);
 
-		LMatricula.setText(null);
-		LMatricula.setDisable(true);
-		//LMatricula.setStyle(OPACIDAD_MEDIA);
+		lMatricula.setText(null);
+		lMatricula.setDisable(true);
 
-		LCIlindradas.setText(null);
-		LCIlindradas.setDisable(true);
-		//LCIlindradas.setStyle(OPACIDAD_MEDIA);
+		lCIlindradas.setText(null);
+		lCIlindradas.setDisable(true);
 
-		LPlazas.setText(null);
-		LPlazas.setDisable(true);
-		//LPlazas.setStyle(OPACIDAD_MEDIA);
+		lPlazas.setText(null);
+		lPlazas.setDisable(true);
 
-		LPMA.setText(null);
-		LPMA.setDisable(true);
-		//LPMA.setStyle(OPACIDAD_MEDIA);
+		lPMA.setText(null);
+		lPMA.setDisable(true);
+		
+		tfMatriculaBuscado.clear();
+		tfMatriculaBuscado.setStyle(null);
+
 	}
 
 	@FXML
@@ -74,22 +85,22 @@ public class BuscarVehiculo extends Controlador {
 
 			Vehiculo vehiculo = VistaGrafica.getInstancia().getControlador().buscar(Vehiculo.getVehiculoConMatricula(tfMatriculaBuscado.getText()));
 			
-			LMarca.setText(vehiculo.getMarca());
-			LMatricula.setText(vehiculo.getMatricula());
-			LModelo.setText(vehiculo.getModelo());
+			lMarca.setText(vehiculo.getMarca());
+			lMatricula.setText(vehiculo.getMatricula());
+			lModelo.setText(vehiculo.getModelo());
 			
 			if (vehiculo instanceof Turismo turismo) {
-				LCIlindradas.setText(String.format("%s", turismo.getCilindrada()));	
-				LPlazas.setText(null);
-				LPMA.setText(null);
+				lCIlindradas.setText(String.format("%s", turismo.getCilindrada()));	
+				lPlazas.setText(null);
+				lPMA.setText(null);
 			} else if (vehiculo instanceof Furgoneta furgoneta) {
-				LPMA.setText(String.format("%s", furgoneta.getPma()));
-				LPlazas.setText(String.format("%s", furgoneta.getPlazas()));
-				LCIlindradas.setText(null);
+				lPMA.setText(String.format("%s", furgoneta.getPma()));
+				lPlazas.setText(String.format("%s", furgoneta.getPlazas()));
+				lCIlindradas.setText(null);
 			} else if (vehiculo instanceof Autobus autobus) {
-				LPlazas.setText(String.format("%s", autobus.getPlazas()));
-				LCIlindradas.setText(null);
-				LPMA.setText(null);
+				lPlazas.setText(String.format("%s", autobus.getPlazas()));
+				lCIlindradas.setText(null);
+				lPMA.setText(null);
 			}
 			
 			Dialogos.mostrarDialogoAdvertencia("AVISO: Busqueda vehículo", "El vehículo se ha buscado correctamente",

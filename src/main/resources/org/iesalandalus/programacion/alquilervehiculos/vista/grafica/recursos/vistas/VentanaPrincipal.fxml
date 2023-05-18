@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -11,10 +12,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+
 <HBox prefHeight="604.0" prefWidth="667.0" styleClass="hbox-MainScene" stylesheets="@../css/VentanaPrincipal.css" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.alquilervehiculos.vista.grafica.controladores.VentanaPrincipal">
    <children>
       <VBox alignment="CENTER" maxHeight="598.0" maxWidth="60.0" styleClass="vbox-MenuBar" stylesheets="@../css/VentanaPrincipal.css">
          <children>
+            <Separator prefWidth="200.0" styleClass="separator-horizontal" stylesheets="@../css/VentanaPrincipal.css" />
             <StackPane maxHeight="45.0" maxWidth="55.0" styleClass="stackPane-button-imageView" stylesheets="@../css/VentanaPrincipal.css">
                <VBox.margin>
                   <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
@@ -31,6 +34,7 @@
                   </Button>
                </children>
             </StackPane>
+            <Separator prefWidth="200.0" styleClass="separator-horizontal" stylesheets="@../css/VentanaPrincipal.css" />
             <StackPane maxHeight="45.0" maxWidth="55.0" styleClass="stackPane-button-imageView" stylesheets="@../css/VentanaPrincipal.css">
                <children>
                   <Button maxHeight="45.0" maxWidth="55.0" mnemonicParsing="false" onMousePressed="#ratonPresionaBotonVista" styleClass="button-imageView" stylesheets="@../css/VentanaPrincipal.css">
@@ -47,6 +51,24 @@
                   <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
                </VBox.margin>
             </StackPane>
+            <Separator prefWidth="200.0" styleClass="separator-horizontal" stylesheets="@../css/VentanaPrincipal.css" />
+            <StackPane maxHeight="45.0" maxWidth="55.0" styleClass="stackPane-button-imageView" stylesheets="@../css/VentanaPrincipal.css">
+               <children>
+                  <Button maxHeight="45.0" maxWidth="55.0" mnemonicParsing="false" onMousePressed="#ratonPresionaBotonEstadisticas" styleClass="button-imageView" stylesheets="@../css/VentanaPrincipal.css">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Imagenes/Iconos%20-%20MenuLateral/Estadisticas.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+               </VBox.margin>
+            </StackPane>
+            <Separator prefWidth="200.0" styleClass="separator-horizontal" stylesheets="@../css/VentanaPrincipal.css" />
             <StackPane maxHeight="45.0" maxWidth="55.0" styleClass="stackPane-button-imageView" stylesheets="@../css/VentanaPrincipal.css">
                <children>
                   <Button maxHeight="45.0" maxWidth="55.0" mnemonicParsing="false" onMousePressed="#ratonPresionaBotonInformacion" styleClass="button-imageView" stylesheets="@../css/VentanaPrincipal.css">
@@ -66,6 +88,7 @@
                   <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
                </VBox.margin>
             </StackPane>
+            <Separator prefWidth="200.0" styleClass="separator-horizontal" stylesheets="@../css/VentanaPrincipal.css" />
          </children>
       </VBox>
       <VBox prefHeight="200.0" prefWidth="100.0">
@@ -74,7 +97,7 @@
                <children>
                   <VBox prefHeight="594.0" prefWidth="668.0">
                      <children>
-                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hbox" stylesheets="@../css/VentanaPrincipal.css">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="hbox" stylesheets="@../css/VentanaPrincipal.css">
                            <children>
                               <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
                                  <children>
@@ -105,6 +128,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" styleClass="separator-vertical" stylesheets="@../css/VentanaPrincipal.css" />
                               <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btBuscarVehiculo" onMouseEntered="#ratonEncimaBoton" onMouseExited="#ratonSaliendoBoton" prefHeight="114.0" prefWidth="97.0" stylesheets="@../css/VentanaPrincipal.css" text="Buscar">
                                  <font>
                                     <Font name="Tahoma Bold" size="17.0" />
@@ -120,6 +144,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" styleClass="separator-vertical" stylesheets="@../css/VentanaPrincipal.css" />
                               <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btBorrarVehiculo" onMouseEntered="#ratonEncimaBoton" onMouseExited="#ratonSaliendoBoton" prefHeight="114.0" prefWidth="97.0" stylesheets="@../css/VentanaPrincipal.css" text="Borrar">
                                  <font>
                                     <Font name="Tahoma Bold" size="17.0" />
@@ -135,6 +160,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" styleClass="separator-vertical" stylesheets="@../css/VentanaPrincipal.css" />
                               <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btListarVehiculo" onMouseEntered="#ratonEncimaBoton" onMouseExited="#ratonSaliendoBoton" prefHeight="114.0" prefWidth="97.0" stylesheets="@../css/VentanaPrincipal.css" text="Listar">
                                  <font>
                                     <Font name="Tahoma Bold" size="17.0" />
@@ -161,7 +187,7 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hbox" stylesheets="@../css/VentanaPrincipal.css">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="hbox" stylesheets="@../css/VentanaPrincipal.css">
                            <children>
                               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                                  <children>
@@ -192,6 +218,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" styleClass="separator-vertical" stylesheets="@../css/VentanaPrincipal.css" />
                               <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btBuscarCliente" onMouseEntered="#ratonEncimaBoton" onMouseExited="#ratonSaliendoBoton" prefHeight="114.0" prefWidth="97.0" stylesheets="@../css/VentanaPrincipal.css" text="Buscar" textFill="WHITE">
                                  <font>
                                     <Font name="Tahoma Bold" size="17.0" />
@@ -207,6 +234,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" styleClass="separator-vertical" stylesheets="@../css/VentanaPrincipal.css" />
                               <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btBorrarCliente" onMouseEntered="#ratonEncimaBoton" onMouseExited="#ratonSaliendoBoton" prefHeight="114.0" prefWidth="97.0" stylesheets="@../css/VentanaPrincipal.css" text="Borrar" textFill="WHITE">
                                  <font>
                                     <Font name="Tahoma Bold" size="17.0" />
@@ -222,6 +250,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" styleClass="separator-vertical" stylesheets="@../css/VentanaPrincipal.css" />
                               <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btListarCliente" onMouseEntered="#ratonEncimaBoton" onMouseExited="#ratonSaliendoBoton" prefHeight="114.0" prefWidth="97.0" stylesheets="@../css/VentanaPrincipal.css" text="Listar" textFill="WHITE">
                                  <font>
                                     <Font name="Tahoma Bold" size="17.0" />
@@ -248,7 +277,7 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hbox" stylesheets="@../css/VentanaPrincipal.css">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="hbox" stylesheets="@../css/VentanaPrincipal.css">
                            <children>
                               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                                  <children>
@@ -279,6 +308,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" styleClass="separator-vertical" stylesheets="@../css/VentanaPrincipal.css" />
                               <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btBuscarAlquiler" onMouseEntered="#ratonEncimaBoton" onMouseExited="#ratonSaliendoBoton" prefHeight="114.0" prefWidth="97.0" stylesheets="@../css/VentanaPrincipal.css" text="Buscar" textFill="WHITE">
                                  <font>
                                     <Font name="Tahoma Bold" size="17.0" />
@@ -294,6 +324,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" styleClass="separator-vertical" stylesheets="@../css/VentanaPrincipal.css" />
                               <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btBorrarAlquiler" onMouseEntered="#ratonEncimaBoton" onMouseExited="#ratonSaliendoBoton" prefHeight="114.0" prefWidth="97.0" stylesheets="@../css/VentanaPrincipal.css" text="Borrar" textFill="WHITE">
                                  <font>
                                     <Font name="Tahoma Bold" size="17.0" />
@@ -309,6 +340,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" styleClass="separator-vertical" stylesheets="@../css/VentanaPrincipal.css" />
                               <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#btListarAlquiler" onMouseEntered="#ratonEncimaBoton" onMouseExited="#ratonSaliendoBoton" prefHeight="114.0" prefWidth="97.0" stylesheets="@../css/VentanaPrincipal.css" text="Listar" textFill="WHITE">
                                  <font>
                                     <Font name="Tahoma Bold" size="17.0" />
@@ -337,7 +369,7 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <StackPane fx:id="stackPaneMenuDesplegable" maxHeight="596.0" maxWidth="80.0" />
+                  <StackPane fx:id="stackPaneMenuDesplegable" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="250.0" prefWidth="150.0" translateY="16.0" />
                </children>
             </StackPane>
             <HBox alignment="BOTTOM_RIGHT" maxHeight="32.0" maxWidth="668.0" styleClass="hbox-botLine" stylesheets="@../css/VentanaPrincipal.css">

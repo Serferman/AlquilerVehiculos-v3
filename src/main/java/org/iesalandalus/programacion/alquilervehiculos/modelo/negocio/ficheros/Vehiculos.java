@@ -127,29 +127,29 @@ public class Vehiculos implements IVehiculos {
 	private Element getElemento(Document documentoXml, Vehiculo vehiculo) {
 		Element elementoVehiculo = documentoXml.createElement("vehiculo");
 
-		elementoCliente.setAttribute(MARCA, vehiculo.getMarca());
-		elementoCliente.setAttribute(MODELO, vehiculo.getModelo());
-		elementoCliente.setAttribute(MATRICULA, vehiculo.getMatricula());
+		elementoVehiculo.setAttribute(MARCA, vehiculo.getMarca());
+		elementoVehiculo.setAttribute(MODELO, vehiculo.getModelo());
+		elementoVehiculo.setAttribute(MATRICULA, vehiculo.getMatricula());
 
 		if (vehiculo instanceof Turismo turismo) {
 
-			elementoCliente.setAttribute(CILINDRADA, String.format("%d", turismo.getCilindrada()));
-			elementoCliente.setAttribute(TIPO, TURISMO);
+			elementoVehiculo.setAttribute(CILINDRADA, String.format("%d", turismo.getCilindrada()));
+			elementoVehiculo.setAttribute(TIPO, TURISMO);
 
 		} else if (vehiculo instanceof Autobus autobus) {
 
-			elementoCliente.setAttribute(PLAZAS, String.format("%d", autobus.getPlazas()));
-			elementoCliente.setAttribute(TIPO, AUTOBUS);
+			elementoVehiculo.setAttribute(PLAZAS, String.format("%d", autobus.getPlazas()));
+			elementoVehiculo.setAttribute(TIPO, AUTOBUS);
 
 		} else if (vehiculo instanceof Furgoneta furgoneta) {
 
-			elementoCliente.setAttribute(PMA, String.format("%d", furgoneta.getPma()));
-			elementoCliente.setAttribute(PLAZAS, String.format("%d", furgoneta.getPlazas()));
-			elementoCliente.setAttribute(TIPO, FURGONETA);
+			elementoVehiculo.setAttribute(PMA, String.format("%d", furgoneta.getPma()));
+			elementoVehiculo.setAttribute(PLAZAS, String.format("%d", furgoneta.getPlazas()));
+			elementoVehiculo.setAttribute(TIPO, FURGONETA);
 
 		}
 
-		return elementoCliente;
+		return elementoVehiculo;
 	}
 
 	@Override

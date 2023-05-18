@@ -51,6 +51,10 @@ public class InsertarCliente extends Controlador {
 	@FXML
 	void ratonPulsaCancelar(MouseEvent event) {
 		getEscenario().close();
+		
+    	tfNombre.clear();
+    	tfDni.clear();
+    	tfTelefono.clear();
 	}
 
 

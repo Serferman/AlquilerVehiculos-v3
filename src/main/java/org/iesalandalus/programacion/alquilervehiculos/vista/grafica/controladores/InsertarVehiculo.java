@@ -43,50 +43,52 @@ public class InsertarVehiculo extends Controlador {
     private static final String AUTOBUS = "Autobus";
     private static final String FURGONETA = "Furgoneta";
     
+	private static final String OPACIDAD_MEDIA = "-fx-opacity: 0.5;";
+	private static final String OPACIDAD_COMPLETA = "-fx-opacity: 1;";
+    
     @FXML
     void initialize() {
-    	// Creamos las opciones del choice box
 		chbTipoVehiculo.setItems(FXCollections.observableArrayList(TURISMO, AUTOBUS, FURGONETA));
-		// Comprobacion del campo seleccionado mediante los listener
 		chbTipoVehiculo.valueProperty().addListener(nv -> comprobarTipoVehiculo());
     }
     
     void comprobarTipoVehiculo() {
     	
 		String opcionSeleccionada = chbTipoVehiculo.valueProperty().getValue();
-		//chbTipoVehiculo.setValue(TURISMO);
-    	
-    	if (opcionSeleccionada.equals(TURISMO)) {
-			tfPlazas.setDisable(true);
-			tfPlazas.setStyle("-fx-opacity: 0.5;");
-			
-			tfPMA.setDisable(true);
-			tfPMA.setStyle("-fx-opacity: 0.5;");
-			
-			tfCilindradas.setDisable(false);
-			tfCilindradas.setStyle("-fx-opacity: 1.0;");
-			
-		} else if (opcionSeleccionada.equals(AUTOBUS)) {
-			tfPMA.setDisable(true);
-			tfPMA.setStyle("-fx-opacity: 0.5;");
-			
-			tfCilindradas.setDisable(true);
-			tfCilindradas.setStyle("-fx-opacity: 0.5;");
-			
-			tfPlazas.setDisable(false);
-			tfPlazas.setStyle("-fx-opacity: 1.0;");
-			
-		} else if (opcionSeleccionada.equals(FURGONETA)) {
-			tfCilindradas.setDisable(true);
-			tfCilindradas.setStyle("-fx-opacity: 0.5;");
-			
-			tfPlazas.setDisable(false);
-			tfPlazas.setStyle("-fx-opacity: 1.0;");
-			
-			tfPMA.setDisable(false);
-			tfPMA.setStyle("-fx-opacity: 1.0;");
-			
-		}
+		
+    	if (opcionSeleccionada != null) {
+	    	if (opcionSeleccionada.equals(TURISMO)) {
+				tfPlazas.setDisable(true);
+				tfPlazas.setStyle(OPACIDAD_MEDIA);
+				
+				tfPMA.setDisable(true);
+				tfPMA.setStyle(OPACIDAD_MEDIA);
+				
+				tfCilindradas.setDisable(false);
+				tfCilindradas.setStyle(OPACIDAD_COMPLETA);
+				
+			} else if (opcionSeleccionada.equals(AUTOBUS)) {
+				tfPMA.setDisable(true);
+				tfPMA.setStyle(OPACIDAD_MEDIA);
+				
+				tfCilindradas.setDisable(true);
+				tfCilindradas.setStyle(OPACIDAD_MEDIA);
+				
+				tfPlazas.setDisable(false);
+				tfPlazas.setStyle(OPACIDAD_COMPLETA);
+				
+			} else if (opcionSeleccionada.equals(FURGONETA)) {
+				tfCilindradas.setDisable(true);
+				tfCilindradas.setStyle(OPACIDAD_MEDIA);
+				
+				tfPlazas.setDisable(false);
+				tfPlazas.setStyle(OPACIDAD_COMPLETA);
+				
+				tfPMA.setDisable(false);
+				tfPMA.setStyle(OPACIDAD_COMPLETA);
+				
+			}
+    	}
     }
     
     // Crea un vehiculo
@@ -97,7 +99,8 @@ public class InsertarVehiculo extends Controlador {
 		
 		Vehiculo vehiculo = null;
 		
-		String opcionSeleccionada = chbTipoVehiculo.valueProperty().getValue();
+		String opcionSeleccionada = chbTipoVehiculo.getSelectionModel().getSelectedItem();
+									//chbTipoVehiculo.valueProperty().getValue();
 		
 		if (opcionSeleccionada.equals(TURISMO)) {
 			vehiculo = new Turismo(marca,modelo,Integer.parseInt(tfCilindradas.getText()),matricula);
@@ -125,10 +128,23 @@ public class InsertarVehiculo extends Controlador {
     @FXML
     void ratonPulsaCancelar(MouseEvent event) {
     	getEscenario().close();
+    	
+    	chbTipoVehiculo.valueProperty().setValue(null);
+    	//chbTipoVehiculo.getSelectionModel().clearSelection();
+    	
+    	tfMarca.clear();
+    	tfModelo.clear();
+    	tfMatricula.clear();
+    	tfCilindradas.clear();
+    	tfPlazas.clear();
+    	tfPMA.clear();
     }   
     
     @FXML
     void ratonPulsaBorrar(MouseEvent event) {
+    	chbTipoVehiculo.valueProperty().set(null);
+    	//chbTipoVehiculo.getSelectionModel().clearSelection();
+    
     	tfMarca.clear();
     	tfModelo.clear();
     	tfMatricula.clear();

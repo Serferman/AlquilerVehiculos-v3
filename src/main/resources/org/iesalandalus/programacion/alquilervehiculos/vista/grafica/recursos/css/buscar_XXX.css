@@ -1,4 +1,4 @@
-/* Parametros generales para todos los CUADROS DE TEXTO de buscar clientes  */
+/* Parametros generales para todos los CUADROS DE TEXTO de buscar cliente , vehiculo  */
 
 .textField {
     -fx-background-color: white;
@@ -23,24 +23,6 @@
     -fx-scale-y: 1.0;
 }
 
-
-/* Parametros y configuración para las ETIQUETAS principales de buscar clientes, vehiculos, alquileres */
-
-.label {
-    -fx-font-family: Tahoma;
-    -fx-font-weight: bold;
-    -fx-font-color: black;
-    -fx-font-size: 22;
-}
-
-/* Parametros y configuración para las ETIQUETAS principales de buscar clientes, vehiculos, alquileres */
-
-.label-DNI {
-    -fx-font-family: Tahoma;
-    -fx-font-weight: normal;
-    -fx-font-color: black;
-    -fx-font-size: 16;
-}
 
 /* Parametros y configuración para el boton ACEPTAR de buscar clientes, vehiculos */
 
@@ -126,6 +108,7 @@
     -fx-border-radius: 5;
 }
 
+
 /* Parametros y configuración para el boton MODIFICAR de buscar clientes  */
 
 .button-Modificar {
@@ -153,4 +136,87 @@
     -fx-border-radius: 5;
     -fx-max-height: 38;
     -fx-max-width: 104;
+}
+
+
+/* Parametros y configuración para las ETIQUETAS principales de buscar clientes, vehiculos, alquileres */
+
+.label {
+    -fx-font-family: Tahoma;
+    -fx-font-weight: bold;
+    -fx-font-color: black;
+    -fx-font-size: 22;
+}
+
+
+/* Parametros y configuración para las ETIQUETAS principales de buscar clientes, vehiculos */
+
+.label-Mostrados {
+    -fx-font-family: Tahoma;
+    -fx-font-weight: normal;
+    -fx-font-color: black;
+    -fx-font-size: 16;
+}
+
+
+/* Parametros y configuración para las LISTAS principales de buscar clientes, vehiculos, alquileres */
+
+.listView {
+    -fx-max-width: 380;
+    -fx-max-height: 80;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+
+/* Parametros y configuración para el SELECTOR DE FECHA de fecha de alquiler de buscar alquiler */
+
+.datePicker {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-max-height: 38;
+    -fx-max-width:  164;
+}
+
+
+/* Parametros y configuración para el VBOX de buscar alquiler */
+
+.vbox-alquiler {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #ECE2C6;
+    -fx-pref-height: 380;
+    -fx-pref-width: 400;
+}
+
+
+/* Parametros y configuración para el GRID PANEL de buscar cliente */
+
+.grid-cliente {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #ECE2C6;
+    -fx-max-height: 177;
+    -fx-max-width:  364;
+}
+
+
+/* Parametros y configuración para el GRID PANEL de buscar vehiculo */
+
+.grid-vehiculo {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #ECE2C6;
+    -fx-max-height: 230;
+    -fx-max-width:  320;
 }

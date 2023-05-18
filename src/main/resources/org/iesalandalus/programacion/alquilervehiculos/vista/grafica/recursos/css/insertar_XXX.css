@@ -139,3 +139,42 @@
     -fx-max-height: 38;
     -fx-max-width:  164;
 }
+
+
+/* Parametros y configuración para el GRID PANEL de insertar alquiler */
+
+.grid-alquiler {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #ECE2C6;
+    -fx-max-height: 200;
+    -fx-max-width:  450;
+}
+
+
+/* Parametros y configuración para el GRID PANEL de insertar cliente */
+
+.grid-cliente {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #ECE2C6;
+    -fx-max-height: 170;
+    -fx-max-width:  370;
+}
+
+
+/* Parametros y configuración para el GRID PANEL de insertar vehiculo */
+
+.grid-vehiculo {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #ECE2C6;
+    -fx-max-height: 370;
+    -fx-max-width:  370;
+}

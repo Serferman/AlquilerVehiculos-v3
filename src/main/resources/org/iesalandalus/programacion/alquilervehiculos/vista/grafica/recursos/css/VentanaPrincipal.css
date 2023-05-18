@@ -37,8 +37,9 @@
 
 .button-imageView {
     -fx-border-width: 0;
-    -fx-background-color: #97dfdf;
+    -fx-background-color: #e2ffd5;
     -fx-translate-y: -1;
+    -fx-background-radius: 5;
 }
 
 .button-imageView:hover {
@@ -54,7 +55,7 @@
 }
 
 .stackPane-button-imageView {
-    -fx-border-radius: 10;
+    -fx-border-radius: 5;
     -fx-border-width: 3;
     -fx-border-color:black;
     -fx-background-color: #155555;
@@ -69,6 +70,8 @@
     -fx-border-width: 2 0 0 0;
     -fx-border-color:black;
     -fx-effect: dropshadow(Three-pass-box, black, 8, 0, 0, 0 );
+    -fx-max-width: 700;
+    -fx-max-height: 32;
 }
 
 .hbox-botLine:hover {
@@ -111,4 +114,15 @@
     -fx-background-color: #C2C2C2;
     -fx-border-color: black;
     -fx-border-width: 3;
+}
+
+
+.separator-horizontal {
+    -fx-max-width: 46;
+    -fx-blend-mode: multiply;
+}
+
+.separator-vertical {
+    -fx-max-height: 110;
+    -fx-blend-mode: multiply;
 }

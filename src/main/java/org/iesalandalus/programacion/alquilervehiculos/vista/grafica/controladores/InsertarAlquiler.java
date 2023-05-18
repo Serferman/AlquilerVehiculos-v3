@@ -51,6 +51,10 @@ public class InsertarAlquiler extends Controlador {
     @FXML
     void ratonPulsaCancelar(MouseEvent event) {
     	getEscenario().close();
+    	
+    	tfDni.clear();
+    	tfMatricula.clear();
+    	dpFechaAlquiler.setValue(null);
     }
     
     @FXML
