@@ -1,4 +1,4 @@
-/* Parametros y configuración para las ETIQUETAS principales de buscar clientes, vehiculos */
+/* Parametros y configuración para el VBOX del menu de destacados de autor */
 
 .vbox-menuDestacados {
     -fx-background-color: #dbe7ff;
@@ -7,7 +7,7 @@
 }
 
 
-/* Parametros y configuración para las ETIQUETAS principales de buscar clientes, vehiculos */
+/* Parametros y configuración para la BARRA inferior de autor*/
 
 .hbox-menuInferior {
     -fx-background-color: #a3a2a2;
@@ -23,7 +23,7 @@
 }
 
 
-/* Parametros y configuración para las ETIQUETAS principales de buscar clientes, vehiculos */
+/* Parametros y configuración para las IMAGENES de la parte inferior de autor */
 
 
 .hyperlink-imageView {
@@ -45,7 +45,7 @@
 }
 
 
-/* Parametros y configuración para las ETIQUETAS principales de buscar clientes, vehiculos */
+/* Parametros y configuración para la ETIQUETA del nombre de usuario del autor */
 
 .label-Nickname {
     -fx-font-family: Tahoma;
@@ -55,7 +55,7 @@
 }
 
 
-/* Parametros y configuración para las ETIQUETAS principales de buscar clientes, vehiculos */
+/* Parametros y configuración para la ETIQUEDA del nombre y apellidos reales del autor */
 
 .label-NombreApellidos {
     -fx-font-family: Tahoma;
@@ -65,7 +65,7 @@
 }
 
 
-/* Parametros y configuración para las ETIQUETAS principales de buscar clientes, vehiculos */
+/* Parametros y configuración para la ETIQUETA de destacados de autor */
 
 .label-Destacados {
     -fx-font-family: Tahoma;
@@ -75,7 +75,7 @@
 }
 
 
-/* Parametros y configuración para las ETIQUETAS principales de buscar clientes, vehiculos */
+/* Parametros y configuración del VOBX principal de autor */
 
 .vbox-MainScene {
     -fx-background-color: #e0e0e0;

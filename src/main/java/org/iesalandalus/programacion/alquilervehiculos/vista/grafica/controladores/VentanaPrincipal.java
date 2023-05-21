@@ -56,22 +56,19 @@ public class VentanaPrincipal extends Controlador {
 	
 	@FXML
 	void btBorrarAlquiler(ActionEvent event) {
-		BorrarAlquiler ventanaBorrarAlquiler = (BorrarAlquiler) Controladores.get("vistas/borrarAlquiler.fxml",
-				"Vista grafica de borrar alquiler", getEscenario());
+		BorrarAlquiler ventanaBorrarAlquiler = (BorrarAlquiler) Controladores.get("vistas/borrarAlquiler.fxml", "Vista grafica de borrar alquiler", getEscenario());
 		ventanaBorrarAlquiler.getEscenario().showAndWait();
 	}
 
 	@FXML
 	void btBorrarCliente(ActionEvent event) {
-		BorrarCliente ventanaBorrarCliente = (BorrarCliente) Controladores.get("vistas/borrarCliente.fxml",
-				"Vista grafica de borrar cliente", getEscenario());
+		BorrarCliente ventanaBorrarCliente = (BorrarCliente) Controladores.get("vistas/borrarCliente.fxml", "Vista grafica de borrar cliente", getEscenario());
 		ventanaBorrarCliente.getEscenario().showAndWait();
 	}
 
 	@FXML
 	void btBorrarVehiculo(ActionEvent event) {
-		BorrarVehiculo ventanaBorrarVehiculo = (BorrarVehiculo) Controladores.get("vistas/borrarVehiculo.fxml",
-				"Vista grafica de borrar vehiculo", getEscenario());
+		BorrarVehiculo ventanaBorrarVehiculo = (BorrarVehiculo) Controladores.get("vistas/borrarVehiculo.fxml", "Vista grafica de borrar vehiculo", getEscenario());
 		ventanaBorrarVehiculo.getEscenario().showAndWait();
 	}
 
@@ -79,22 +76,19 @@ public class VentanaPrincipal extends Controlador {
 
 	@FXML
 	void btBuscarAlquiler(ActionEvent event) {
-		BuscarAlquiler ventanaBuscarAlquiler = (BuscarAlquiler) Controladores.get("vistas/buscarAlquiler.fxml",
-				"Vista grafica de borrar alquiler", getEscenario());
+		BuscarAlquiler ventanaBuscarAlquiler = (BuscarAlquiler) Controladores.get("vistas/buscarAlquiler.fxml", "Vista grafica de borrar alquiler", getEscenario());
 		ventanaBuscarAlquiler.getEscenario().showAndWait();
 	}
 
 	@FXML
 	void btBuscarCliente(ActionEvent event) {
-		BuscarCliente ventanaBuscarCliente = (BuscarCliente) Controladores.get("vistas/buscarCliente.fxml",
-				"Vista grafica de borrar cliente", getEscenario());
+		BuscarCliente ventanaBuscarCliente = (BuscarCliente) Controladores.get("vistas/buscarCliente.fxml", "Vista grafica de borrar cliente", getEscenario());
 		ventanaBuscarCliente.getEscenario().showAndWait();
 	}
 
 	@FXML
 	void btBuscarVehiculo(ActionEvent event) {
-		BuscarVehiculo ventanaBuscarVehiculo = (BuscarVehiculo) Controladores.get("vistas/buscarVehiculo.fxml",
-				"Vista grafica de borrar vehiculo", getEscenario());
+		BuscarVehiculo ventanaBuscarVehiculo = (BuscarVehiculo) Controladores.get("vistas/buscarVehiculo.fxml", "Vista grafica de borrar vehiculo", getEscenario());
 		ventanaBuscarVehiculo.getEscenario().showAndWait();
 	}
 
@@ -102,22 +96,19 @@ public class VentanaPrincipal extends Controlador {
 
 	@FXML
 	void btInsertarAlquiler(ActionEvent event) {
-		InsertarAlquiler ventanaInsertarAlquiler = (InsertarAlquiler) Controladores.get("vistas/insertarAlquiler.fxml",
-				"Vista gráfica de insertar alquiler", getEscenario());
+		InsertarAlquiler ventanaInsertarAlquiler = (InsertarAlquiler) Controladores.get("vistas/insertarAlquiler.fxml", "Vista gráfica de insertar alquiler", getEscenario());
 		ventanaInsertarAlquiler.getEscenario().showAndWait();
 	}
 
 	@FXML
 	void btInsertarCliente(ActionEvent event) {
-		InsertarCliente ventanaInsertarCliente = (InsertarCliente) Controladores.get("vistas/insertarCliente.fxml",
-				"Vista gráfica de insertar cliente", getEscenario());
+		InsertarCliente ventanaInsertarCliente = (InsertarCliente) Controladores.get("vistas/insertarCliente.fxml", "Vista gráfica de insertar cliente", getEscenario());
 		ventanaInsertarCliente.getEscenario().showAndWait();
 	}
 
 	@FXML
 	void btInsertarVehiculo(ActionEvent event) {
-		InsertarVehiculo ventanaInsertarVehiculo = (InsertarVehiculo) Controladores.get("vistas/insertarVehiculo.fxml",
-				"Vista gráfica de insertar vehículo", getEscenario());
+		InsertarVehiculo ventanaInsertarVehiculo = (InsertarVehiculo) Controladores.get("vistas/insertarVehiculo.fxml", "Vista gráfica de insertar vehículo", getEscenario());
 		ventanaInsertarVehiculo.getEscenario().showAndWait();
 	}
 
@@ -125,22 +116,19 @@ public class VentanaPrincipal extends Controlador {
 
 	@FXML
 	void btListarAlquiler(ActionEvent event) {
-		ListarAlquileres ventanaListarAlquileres = (ListarAlquileres) Controladores.get("vistas/listarAlquileres.fxml",
-				"Vista grafica de listar alquileres", getEscenario());
+		ListarAlquileres ventanaListarAlquileres = (ListarAlquileres) Controladores.get("vistas/listarAlquileres.fxml", "Vista grafica de listar alquileres", getEscenario());
 		ventanaListarAlquileres.getEscenario().showAndWait();
 	}
 
 	@FXML
 	void btListarCliente(ActionEvent event) {
-		ListarClientes ventanaListarClientes = (ListarClientes) Controladores.get("vistas/listarClientes.fxml",
-				"Vista grafica de listar clientes", getEscenario());
+		ListarClientes ventanaListarClientes = (ListarClientes) Controladores.get("vistas/listarClientes.fxml", "Vista grafica de listar clientes", getEscenario());
 		ventanaListarClientes.getEscenario().showAndWait();
 	}
 
 	@FXML
 	void btListarVehiculo(ActionEvent event) {
-		ListarVehiculos ventanaListarVehiculos = (ListarVehiculos) Controladores.get("vistas/listarVehiculos.fxml",
-				"Vista grafica de listar vehiculos", getEscenario());
+		ListarVehiculos ventanaListarVehiculos = (ListarVehiculos) Controladores.get("vistas/listarVehiculos.fxml", "Vista grafica de listar vehiculos", getEscenario());
 		ventanaListarVehiculos.getEscenario().showAndWait();
 	}
 
@@ -236,7 +224,6 @@ public class VentanaPrincipal extends Controlador {
 	            PdfWriter.getInstance(document, new FileOutputStream("Tablas_Alquileres_Vehiculos_Clientes.pdf"));
 	           
 	            document.setPageSize(PageSize.A4.rotate());
-	            
 	            document.open();
 	           
 	            PdfPTable tableAlquileres11Celdas = crearTablaAlquileres();
@@ -447,6 +434,7 @@ public class VentanaPrincipal extends Controlador {
 
 	void ratonPulsaMaximizar() {
 		//getEscenario().getScene().getRoot().getStylesheets("");	
+		Dialogos.mostrarDialogoInformacion("Boton Maximizar", "AVISO: Este boton no sirve para nada, ya que su funcionalidad se implementará en el siguiente spring", getEscenario());
 	}
 
 	void ratonPulsaMinimizar() {
@@ -507,8 +495,7 @@ public class VentanaPrincipal extends Controlador {
 	}
 
 	void ratonPulsaMostrarEstadisticas() {
-		MostrarEstadisticasMensuales ventanaMostrarEstadisticasMensuales = (MostrarEstadisticasMensuales) Controladores.get("vistas/mostrarEstadisticasMensuales.fxml",
-				"Vista grafica de las estadisticas mensuales", getEscenario());
+		MostrarEstadisticasMensuales ventanaMostrarEstadisticasMensuales = (MostrarEstadisticasMensuales) Controladores.get("vistas/mostrarEstadisticasMensuales.fxml", "Vista grafica de las estadisticas mensuales", getEscenario());
 		stackPaneMenuDesplegable.getChildren().clear();
 		ventanaMostrarEstadisticasMensuales.getEscenario().showAndWait();
 	}

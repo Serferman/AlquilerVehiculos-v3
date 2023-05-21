@@ -70,6 +70,9 @@ public class ListarAlquileres extends Controlador {
 	private static final String NOMBRE_COLUMNA_FECHA_ALQUILER = "fechaAlquiler";
 	private static final String NOMBRE_COLUMNA_FECHA_DEVOLUCION = "fechaDevolucion";
 	
+	private static final String SOMBRA_ROJA = "-fx-effect: dropshadow(Three-pass-box, red, 10, 0, 0, 0 );";
+	private static final String SOMBRA_VERDE = "-fx-effect: dropshadow(Three-pass-box, green, 10, 0, 0, 0 );";
+	
 	@FXML
 	void initialize() {
 		tfClientes.focusedProperty().addListener(e -> comprobarSeleccionClientes());
@@ -102,8 +105,29 @@ public class ListarAlquileres extends Controlador {
 		tcFechaDevolucion.setCellValueFactory(new PropertyValueFactory<>(NOMBRE_COLUMNA_FECHA_DEVOLUCION));
 
 		tvAlquileres.setItems(FXCollections.observableList(VistaGrafica.getInstancia().getControlador().getAlquileres()));
+		
+		tfClientes.textProperty().addListener((ob, ov, nv) -> comprobarTextoDniBuscado(nv));
+		tfVehiculos.textProperty().addListener((ob, ov, nv) -> comprobarTextoMatriculaBuscada(nv));
 	}
 
+	// -------------------------------------------------------------------------------------------------------------------
+
+	void comprobarTextoDniBuscado(String nuevoValor) {
+		if (!nuevoValor.matches("\\d{8}[A-Z]")) {
+			tfClientes.setStyle(SOMBRA_ROJA);
+		} else {
+			tfClientes.setStyle(SOMBRA_VERDE);
+		}
+	}
+	
+	void comprobarTextoMatriculaBuscada(String nuevoValor) {
+		if (!nuevoValor.matches("\\d{4}[BCDFGHJKLMNPRSTVWXYZ]{3}")) {
+			tfVehiculos.setStyle(SOMBRA_ROJA);
+		} else {
+			tfVehiculos.setStyle(SOMBRA_VERDE);
+		}
+	}
+	
 	// -------------------------------------------------------------------------------------------------------------------
 
 	String comprobarCilindradas(Vehiculo vehiculo) {

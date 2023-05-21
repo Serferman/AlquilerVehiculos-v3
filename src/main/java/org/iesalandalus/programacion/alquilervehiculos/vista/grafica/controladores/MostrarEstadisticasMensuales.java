@@ -50,16 +50,16 @@ public class MostrarEstadisticasMensuales extends Controlador {
 	@FXML
 	void ratonPulsaCheck(MouseEvent event) {
 		ObservableList<Data> pieChartlista = pcEstadisticasMensuales.getData();
-
-		for (int i = 0; i < pieChartlista.size(); i++) {
-			pieChartlista.get(i).setPieValue(0);	
+		
+		for(Data datos : pieChartlista) {
+			datos.setPieValue(0);
 		}
 		
 		for (Alquiler alquiler : VistaGrafica.getInstancia().getControlador().getAlquileres()) {
 			if (alquiler.getFechaAlquiler().getYear() == dpFechaAlquiler.getValue().getYear() && alquiler.getFechaAlquiler().getMonth().equals(dpFechaAlquiler.getValue().getMonth())) {
 				String tipoVehiculo = get(alquiler.getVehiculo());
 				
-					switch (tipoVehiculo) {
+				switch (tipoVehiculo) {
 					case TURISMO: {
 						pieChartlista.get(0).setPieValue(pieChartlista.get(0).getPieValue() + 1);
 						break;

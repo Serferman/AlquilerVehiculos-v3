@@ -37,7 +37,7 @@
 }
 
 #vbox-MenuBar:hover {
-    -fx-background-color: #333333;
+    -fx-background-color: #252525;
     -fx-scale-x: 1.02;
     -fx-scale-y: 1.02;
 }
@@ -47,14 +47,14 @@
 
 #button-imageView {
     -fx-border-width: 0;
-    -fx-background-color: #444444;
+    -fx-background-color: #666666;
     -fx-translate-y: -1;
     -fx-background-radius: 5;
 }
 
 #button-imageView:hover {
     -fx-translate-y: -5 ;
-    -fx-background-color: #222222;
+    -fx-background-color: #555555;
     -fx-scale-x: 1;
     -fx-scale-y: 1;
 }
@@ -67,7 +67,7 @@
 #stackPane-button-imageView {
     -fx-border-radius: 5;
     -fx-border-width: 3;
-    -fx-border-color: #555555;
+    -fx-border-color: #888888;
     -fx-background-color: #111111;
     -fx-background-radius: 10;
     -fx-min-width: 57;
@@ -104,7 +104,7 @@
 #hyperlink-imageView:hover {
     -fx-scale-x: 1.06;
     -fx-scale-y: 1.06;
-    -fx-background-color: #333333;
+    -fx-background-color: #888888;
     -fx-background-radius: 3;
 }
 
@@ -127,7 +127,7 @@
 #hbox {
     -fx-background-color: #444444;
     -fx-background-radius: 10;
-    -fx-border-color: #777777;
+    -fx-border-color: #888888;
     -fx-border-radius: 10;
     -fx-border-width: 3;
 }
@@ -137,7 +137,7 @@
 
 #hbox-MainScene {
     -fx-background-color: #555555;
-    -fx-border-color: #777777;
+    -fx-border-color: #999999;
     -fx-border-width: 3;
 }
 
