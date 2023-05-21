@@ -24,14 +24,19 @@ public class ListarClientes extends Controlador {
     @FXML
     private TableView<Cliente> tvClientes;
 	
+    private static final String ESTILO_CENTRADO = "-fx-alignment: CENTER; -fx-max-width: 146";
+    
     @FXML
     void initialize() {
-    	tcDni.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-    	tcNombre.setCellValueFactory(new PropertyValueFactory<>("dni"));
+    	tcDni.setCellValueFactory(new PropertyValueFactory<>("dni"));
+    	tcNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
     	tcTelefono.setCellValueFactory(new PropertyValueFactory<>("telefono"));
     	
+    	tcDni.setStyle(ESTILO_CENTRADO);
+		tcNombre.setStyle(ESTILO_CENTRADO);
+		tcTelefono.setStyle(ESTILO_CENTRADO);
+		
     	tvClientes.setItems(FXCollections.observableList(VistaGrafica.getInstancia().getControlador().getClientes()));
     }
-    
-	
+    	
 }

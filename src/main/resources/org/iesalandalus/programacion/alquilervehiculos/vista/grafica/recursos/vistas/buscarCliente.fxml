@@ -110,8 +110,13 @@
                <children>
                   <Button mnemonicParsing="false" onMouseClicked="#ratonPulsaModificar" styleClass="button-Modificar" stylesheets="@../css/buscar_XXX.css" text="Modificar" />
                </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="stackPane-Devolver" stylesheets="@../css/buscar_XXX.css">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#ratonPulsaDevolver" prefHeight="20.0" prefWidth="98.0" styleClass="button-Devolver" stylesheets="@../css/buscar_XXX.css" text="Devolver" />
+               </children>
                <HBox.margin>
-                  <Insets bottom="6.0" left="6.0" right="10.0" top="6.0" />
+                  <Insets bottom="6.0" left="20.0" right="10.0" top="6.0" />
                </HBox.margin>
             </StackPane>
             <StackPane prefHeight="53.0" prefWidth="110.0" styleClass="stackPane-Cancelar" stylesheets="@../css/buscar_XXX.css">

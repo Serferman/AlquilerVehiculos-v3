@@ -34,18 +34,13 @@ public class InsertarCliente extends Controlador {
 	@FXML
 	void ratonPulsaAceptar(MouseEvent event) {
 		try {
-
 			VistaGrafica.getInstancia().getControlador().insertar(getCliente());
-
 			Dialogos.mostrarDialogoAdvertencia("AVISO: Insercion cliente", "El cliente se ha insertado correctamente", getEscenario());
 			getEscenario().close();
 			
 		} catch (OperationNotSupportedException | NullPointerException | IllegalArgumentException e) {
-
-			Dialogos.mostrarDialogoError("ERROR: Excepcion insertar cliente", e.getMessage(), getEscenario());
-		
+			Dialogos.mostrarDialogoError("ERROR: Excepcion insertar cliente", e.getMessage(), getEscenario());	
 		}
-
 	}
 
 	@FXML

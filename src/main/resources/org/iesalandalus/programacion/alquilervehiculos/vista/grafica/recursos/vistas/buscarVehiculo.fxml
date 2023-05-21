@@ -121,6 +121,14 @@
       </StackPane>
       <HBox alignment="CENTER_RIGHT" prefHeight="64.0" prefWidth="363.0">
          <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="stackPane-Devolver" stylesheets="@../css/buscar_XXX.css">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#ratonPulsaDevolver" prefHeight="20.0" prefWidth="98.0" styleClass="button-Devolver" stylesheets="@../css/buscar_XXX.css" text="Devolver" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="2.0" />
+               </HBox.margin>
+            </StackPane>
             <StackPane prefHeight="53.0" prefWidth="110.0" styleClass="stackPane-Cancelar" stylesheets="@../css/buscar_XXX.css">
                <children>
                   <Button mnemonicParsing="false" onMouseClicked="#ratonPulsaCancelar" prefHeight="20.0" prefWidth="92.0" styleClass="button-Cancelar" stylesheets="@../css/buscar_XXX.css" text="Cancelar" />

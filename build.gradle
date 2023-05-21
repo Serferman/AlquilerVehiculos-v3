@@ -5,7 +5,7 @@
  * For more details take a look at the 'Building Java & JVM projects' chapter in the Gradle
  * User Manual available at https://docs.gradle.org/7.4.2/userguide/building_java_projects.html
  */
-
+ 
 plugins {
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.0.13'
@@ -35,6 +35,7 @@ dependencies {
       
     // Entrada para que el repositorio jitpack.io sepa acceder a la localización de librería entrada
     implementation 'com.github.JRJimenezReyes:entrada:1.0.3'
+    implementation 'com.itextpdf:itextpdf:5.5.13'
 }
 
 tasks.named('test') {

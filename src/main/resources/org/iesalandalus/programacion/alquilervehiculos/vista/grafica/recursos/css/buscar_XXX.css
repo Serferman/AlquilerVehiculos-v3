@@ -139,6 +139,36 @@
 }
 
 
+/* Parametros y configuración para el boton DEVOLVER de buscar clientes  */
+
+.button-Devolver {
+    -fx-background-color: #6cb499;
+    -fx-font-family: Tahoma;
+    -fx-font-weight: bold;
+    -fx-font-color: black;
+    -fx-font-size: 16;
+    -fx-translate-y: -0.6;
+}
+
+.button-Devolver:hover {
+    -fx-translate-y: -5;
+}
+
+.button-Devolver:pressed {
+    -fx-translate-y: -0.6;
+}
+
+.stackPane-Devolver {
+    -fx-background-color: #015D52;
+    -fx-background-radius: 5;
+    -fx-border-color: black;
+    -fx-border-width: 3;
+    -fx-border-radius: 5;
+    -fx-max-height: 38;
+    -fx-max-width: 104;
+}
+
+
 /* Parametros y configuración para las ETIQUETAS principales de buscar clientes, vehiculos, alquileres */
 
 .label {

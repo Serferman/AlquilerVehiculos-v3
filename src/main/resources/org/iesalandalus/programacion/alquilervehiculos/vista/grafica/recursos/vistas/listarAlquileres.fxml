@@ -4,6 +4,7 @@
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.alquilervehiculos.vista.grafica.controladores.ListarAlquileres">
+<VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.alquilervehiculos.vista.grafica.controladores.ListarAlquileres">
    <children>
       <HBox alignment="CENTER" prefHeight="108.0" prefWidth="600.0" spacing="40.0">
          <children>
@@ -59,6 +60,19 @@
             </VBox>
          </children>
       </HBox>
-      <TableView fx:id="tvAlquileres" prefHeight="257.0" prefWidth="600.0" />
+      <TableView fx:id="tvAlquileres" prefHeight="257.0" prefWidth="600.0">
+         <columns>
+            <TableColumn fx:id="tcNombre" prefWidth="105.0" text="Nombre" />
+            <TableColumn fx:id="tcDni" prefWidth="95.0" text="DNI" />
+            <TableColumn fx:id="tcTelefono" prefWidth="90.0" text="Telefono" />
+            <TableColumn fx:id="tcMarca" prefWidth="95.0" text="Marca" />
+            <TableColumn fx:id="tcModelo" prefWidth="95.0" text="Modelo" />
+            <TableColumn fx:id="tcMatricula" prefWidth="90.0" text="Matricula" />
+            <TableColumn fx:id="tcCilindrada" prefWidth="90.0" text="Cilindrada" />
+            <TableColumn fx:id="tcPlazas" prefWidth="70.0" text="Plazas" />
+            <TableColumn fx:id="tcPMA" prefWidth="85.0" text="PMA" />
+            <TableColumn fx:id="tcFechaAlquiler" prefWidth="115.0" text="Fecha Alquiler" />
+            <TableColumn fx:id="tcFechaDevolucion" prefWidth="115.0" text="F.Devolucion" />
+         </columns></TableView>
    </children>
 </VBox>

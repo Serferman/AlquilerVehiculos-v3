@@ -38,9 +38,9 @@ public class BorrarAlquiler extends Controlador {
 		try {
 	    
 			if ((lvClientes.getSelectionModel() == null) || (lvVehiculos.getSelectionModel() == null) || (dpFechaAlquiler.getValue() == null)) {
-	    		Dialogos.mostrarDialogoAdvertencia("ERROR: Excepcion borrar vehículo", "Tienes que seleccionar un vehículo, un cliente y una fecha", getEscenario());
+	    		Dialogos.mostrarDialogoAdvertencia("ERROR: Excepcion borrar alquiler", "Tienes que seleccionar un vehículo, un cliente y una fecha", getEscenario());
 	    	} else {
-	    		Dialogos.mostrarDialogoInformacion("Alquiler borrado", VistaGrafica.getInstancia().getControlador().buscar(new Alquiler(lvClientes.getSelectionModel().getSelectedItem(),lvVehiculos.getSelectionModel().getSelectedItem(),dpFechaAlquiler.getValue())).toString(), getEscenario());
+	    		Dialogos.mostrarDialogoInformacion("AVISO: Borrado alquiler", VistaGrafica.getInstancia().getControlador().buscar(new Alquiler(lvClientes.getSelectionModel().getSelectedItem(),lvVehiculos.getSelectionModel().getSelectedItem(),dpFechaAlquiler.getValue())).toString(), getEscenario());
 	    		VistaGrafica.getInstancia().getControlador().borrar(new Alquiler(lvClientes.getSelectionModel().getSelectedItem(),lvVehiculos.getSelectionModel().getSelectedItem(),dpFechaAlquiler.getValue()));
 	    		getEscenario().close();
 	    	}	

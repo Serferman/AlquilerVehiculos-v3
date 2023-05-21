@@ -6,6 +6,7 @@ import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Turismo;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Vehiculo;
 import org.iesalandalus.programacion.alquilervehiculos.vista.grafica.VistaGrafica;
 import org.iesalandalus.programacion.alquilervehiculos.vista.grafica.utilidades.Controlador;
+import org.iesalandalus.programacion.alquilervehiculos.vista.grafica.utilidades.Controladores;
 import org.iesalandalus.programacion.alquilervehiculos.vista.grafica.utilidades.Dialogos;
 
 import javafx.fxml.FXML;
@@ -36,6 +37,8 @@ public class BuscarVehiculo extends Controlador {
 	@FXML
 	private TextField tfMatriculaBuscado;
 
+	static Vehiculo vehiculo;
+	
 	@FXML
 	void initialize() {
 		tfMatriculaBuscado.textProperty().addListener((ob, ov, nv) -> comprobarTextoMatriculaBuscada(nv));
@@ -48,7 +51,7 @@ public class BuscarVehiculo extends Controlador {
 			tfMatriculaBuscado.setStyle("-fx-effect: dropshadow(Three-pass-box, green, 10, 0, 0, 0 );");
 		}
 	}
-	
+
 	@FXML
 	void ratonPulsaBorrar(MouseEvent event) {
 		lMarca.setText(null);
@@ -68,7 +71,7 @@ public class BuscarVehiculo extends Controlador {
 
 		lPMA.setText(null);
 		lPMA.setDisable(true);
-		
+
 		tfMatriculaBuscado.clear();
 		tfMatriculaBuscado.setStyle(null);
 
@@ -83,14 +86,14 @@ public class BuscarVehiculo extends Controlador {
 	void ratonPulsaCheck(MouseEvent event) {
 		try {
 
-			Vehiculo vehiculo = VistaGrafica.getInstancia().getControlador().buscar(Vehiculo.getVehiculoConMatricula(tfMatriculaBuscado.getText()));
-			
+			vehiculo = VistaGrafica.getInstancia().getControlador().buscar(Vehiculo.getVehiculoConMatricula(tfMatriculaBuscado.getText()));
+
 			lMarca.setText(vehiculo.getMarca());
 			lMatricula.setText(vehiculo.getMatricula());
 			lModelo.setText(vehiculo.getModelo());
-			
+
 			if (vehiculo instanceof Turismo turismo) {
-				lCIlindradas.setText(String.format("%s", turismo.getCilindrada()));	
+				lCIlindradas.setText(String.format("%s", turismo.getCilindrada()));
 				lPlazas.setText(null);
 				lPMA.setText(null);
 			} else if (vehiculo instanceof Furgoneta furgoneta) {
@@ -102,7 +105,7 @@ public class BuscarVehiculo extends Controlador {
 				lCIlindradas.setText(null);
 				lPMA.setText(null);
 			}
-			
+
 			Dialogos.mostrarDialogoAdvertencia("AVISO: Busqueda vehículo", "El vehículo se ha buscado correctamente",
 					getEscenario());
 
@@ -110,4 +113,21 @@ public class BuscarVehiculo extends Controlador {
 			Dialogos.mostrarDialogoError("ERROR: Excepcion buscar vehículo", e.getMessage(), getEscenario());
 		}
 	}
+
+	@FXML
+	void ratonPulsaDevolver(MouseEvent event) {
+		try {
+
+			if (vehiculo == null) {
+				throw new NullPointerException("ERROR: No puedes devolver un alquiler de un vehiculo nulo.");
+			}
+
+			DevolverVehiculo ventanaDevolverVehiculo = (DevolverVehiculo) Controladores.get("vistas/devolverVehiculo.fxml", "Vista grafica de devolver vehiculo", getEscenario());
+			ventanaDevolverVehiculo.getEscenario().showAndWait();
+
+		} catch (NullPointerException | IllegalArgumentException e) {
+			Dialogos.mostrarDialogoError("ERROR: Excepcion devolver vehiculo", e.getMessage(), getEscenario());
+		}
+	}
+
 }

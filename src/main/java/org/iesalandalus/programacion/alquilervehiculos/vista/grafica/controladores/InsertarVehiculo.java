@@ -100,7 +100,6 @@ public class InsertarVehiculo extends Controlador {
 		Vehiculo vehiculo = null;
 		
 		String opcionSeleccionada = chbTipoVehiculo.getSelectionModel().getSelectedItem();
-									//chbTipoVehiculo.valueProperty().getValue();
 		
 		if (opcionSeleccionada.equals(TURISMO)) {
 			vehiculo = new Turismo(marca,modelo,Integer.parseInt(tfCilindradas.getText()),matricula);
@@ -130,7 +129,6 @@ public class InsertarVehiculo extends Controlador {
     	getEscenario().close();
     	
     	chbTipoVehiculo.valueProperty().setValue(null);
-    	//chbTipoVehiculo.getSelectionModel().clearSelection();
     	
     	tfMarca.clear();
     	tfModelo.clear();
@@ -143,7 +141,6 @@ public class InsertarVehiculo extends Controlador {
     @FXML
     void ratonPulsaBorrar(MouseEvent event) {
     	chbTipoVehiculo.valueProperty().set(null);
-    	//chbTipoVehiculo.getSelectionModel().clearSelection();
     
     	tfMarca.clear();
     	tfModelo.clear();
